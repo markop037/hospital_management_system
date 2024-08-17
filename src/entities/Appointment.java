@@ -7,6 +7,9 @@ public class Appointment {
     private String dateTime;
     private String status;
 
+    public Appointment() {
+    }
+
     public Appointment(int id, int patientId, int doctorId, String dateTime, String status) {
         this.id = id;
         this.patientId = patientId;
