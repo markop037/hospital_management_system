@@ -21,7 +21,10 @@ import entities.*;
 import controllers.*;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ApplicationMenu extends Application {
@@ -169,19 +172,31 @@ public class ApplicationMenu extends Application {
             String firstName = txtFirstName.getText();
             String lastName = txtLastName.getText();
             String umcn = txtUMCN.getText();
-            String dob = datePickerDOB.getValue().toString();
+            LocalDate dob = datePickerDOB.getValue();
             String address = txtAddress.getText();
             String phoneNumber = txtPhone.getText();
 
-            Patient patient = new Patient(firstName, lastName, umcn, dob, address, phoneNumber);
+            if(firstName.isEmpty() || lastName.isEmpty() || umcn.isEmpty() || dob == null ||
+                address.isEmpty() || phoneNumber.isEmpty()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Missing Information");
+                alert.setHeaderText(null);
+                alert.setContentText("All fields must be filled in.");
+                alert.showAndWait();
+            }
+            else {
+                Patient patient = new Patient(firstName, lastName, umcn, dob.toString(), address, phoneNumber);
 
-            try {
-                patientController.addPatient(patient);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+                try {
+                    patientController.addPatient(patient);
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+
+                formStage.close();
             }
 
-            formStage.close();
+
         });
 
         Scene scene = new Scene(gridPane, 400, 300);
@@ -222,6 +237,53 @@ public class ApplicationMenu extends Application {
 
         tableStage.setScene(scene);
         tableStage.show();
+    }
+
+    private void handleAddAppointment(Connection connection){
+        Stage formStage = new Stage();
+        formStage.initModality(Modality.APPLICATION_MODAL);
+        formStage.setTitle("Add New Appointment");
+
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+
+        Label lblPatient = new Label("Patient:");
+        ComboBox<String> comboBoxPatient = new ComboBox<>();
+        Label lblDoctor = new Label("Doctor:");
+        ComboBox<String> comboBoxDoctor = new ComboBox<>();
+
+        fillComboBox(comboBoxPatient, "SELECT firstName, lastName FROM patient");
+        fillComboBox(comboBoxDoctor, "SELECT firstName, lastName FROM doctor");
+
+        Label lblDate = new Label("Date:");
+        DatePicker datePicker = new DatePicker();
+        Label lblStatus = new Label("Status:");
+        ComboBox<String> comboBoxStatus = new ComboBox<>();
+        comboBoxStatus.setItems(FXCollections.observableArrayList(
+                "Hospitalized",
+                "Discharged",
+                "Awaiting Examination"
+        ));
+
+        Button btnSubmit = new Button("Submit");
+
+    }
+
+    public void fillComboBox(ComboBox<String> comboBox, String query){
+        ObservableList<String> data = FXCollections.observableArrayList();
+        try(Connection conn = DatabaseConnection.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery()) {
+            while(rs.next()){
+                String firstName = rs.getString("firstName");
+                String lastName = rs.getString("lastName");
+                data.add(firstName + " " + lastName);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        comboBox.setItems(data);
     }
 
     public static void main(String[] args) {
