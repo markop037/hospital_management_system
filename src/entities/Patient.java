@@ -13,6 +13,15 @@ public class Patient {
 
     }
 
+    public Patient(String firstName, String lastName, String umcn, String dateOfBirth, String address, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.umcn = umcn;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
+
     public Patient(int id, String firstName, String lastName, String umcn, String dateOfBirth, String address, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
