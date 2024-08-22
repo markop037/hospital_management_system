@@ -7,6 +7,9 @@ public class Doctor {
     private String specialization;
     private String phoneNumber;
 
+    public Doctor() {
+    }
+
     public Doctor(int id, String firstName, String lastName, String specialization, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
@@ -53,5 +56,10 @@ public class Doctor {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString(){
+        return firstName + " " + lastName + "(" + specialization + ")";
     }
 }
