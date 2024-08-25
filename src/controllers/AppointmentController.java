@@ -35,7 +35,7 @@ public class AppointmentController {
                 appointment.setPatientId(rs.getInt("patientId"));
                 appointment.setDoctorId(rs.getInt("doctorId"));
                 appointment.setDateTime(rs.getString("dateTime"));
-                appointment.setDateTime(rs.getString("status"));
+                appointment.setStatus(rs.getString("status"));
                 appointments.add(appointment);
             }
         }
