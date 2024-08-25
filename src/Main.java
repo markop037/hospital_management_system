@@ -1,7 +1,7 @@
-import gui.ApplicationMenu;
+import gui.MainMenuApp;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationMenu.main(args);
+        MainMenuApp.main(args);
     }
 }
