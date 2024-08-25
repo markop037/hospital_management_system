@@ -48,6 +48,16 @@ public class MainMenuApp extends Application {
             doctorsTable(doctors);
         });
 
+        btnAppointments.setOnAction(e -> {
+            try {
+                Appointments appointmentsWindow = new Appointments();
+                Stage appointmentsStage = new Stage();
+                appointmentsWindow.start(appointmentsStage);
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
         VBox vBox = new VBox(20);
         vBox.setAlignment(Pos.CENTER);
         vBox.setPadding(new Insets(20));
