@@ -140,6 +140,7 @@ public class Appointments extends Application {
 
                     Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
                     successAlert.setTitle("Success");
+                    successAlert.setHeaderText(null);
                     successAlert.setContentText("Appointment successfully scheduled!");
                     successAlert.showAndWait();
                 } catch (SQLException ex) {
