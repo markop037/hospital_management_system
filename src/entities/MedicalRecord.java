@@ -7,6 +7,16 @@ public class MedicalRecord {
     private String treatment;
     private String date;
 
+    public MedicalRecord() {
+    }
+
+    public MedicalRecord(int patientId, String diagnosis, String treatment, String date) {
+        this.patientId = patientId;
+        this.diagnosis = diagnosis;
+        this.treatment = treatment;
+        this.date = date;
+    }
+
     public MedicalRecord(int id, int patientId, String diagnosis, String treatment, String date) {
         this.id = id;
         this.patientId = patientId;

@@ -1,5 +1,6 @@
 package gui;
 
+import entities.MedicalRecord;
 import javafx.application.Application;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -62,6 +63,16 @@ public class MainMenuApp extends Application {
                 Patients patientWindow = new Patients();
                 Stage patientStage = new Stage();
                 patientWindow.start(patientStage);
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        btnMedicalRecords.setOnAction(e -> {
+            try {
+                MedicalRecords medicalRecordWindow = new MedicalRecords();
+                Stage medicalRecordStage = new Stage();
+                medicalRecordWindow.start(medicalRecordStage);
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }
