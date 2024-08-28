@@ -9,7 +9,7 @@
 ## Introduction
 
 This hospital management application is developed in Java, using JavaFX for the graphical interface. The application allows for viewing and managing data on doctors, patients, appointments, expenses, 
-and medical records. The data is stored in a database, and the application uses JDBC for connectivity. It enables adding new patients, scheduling appointments, tracking expenses, and maintaining medical records.
+and medical records. The data is stored in a database(MySQL), and the application uses JDBC for connectivity. It enables adding new patients, scheduling appointments, tracking expenses, and maintaining medical records.
 
 ## Technologies and Tools
 
@@ -17,7 +17,7 @@ This project utilizes the following technologies and tools:
 
 - **JavaFX**: Used for creating the graphical user interface (GUI).
 - **JDBC (Java Database Connectivity)**: A technology for connecting the Java application with a relational database, allowing data manipulation and execution of SQL queries.
-- **MySQL**: The relational database used for storing information about patients, doctors, appointments, and medical records.
+- **MySQL**: The relational database used for storing information about patients, doctors, appointments, expenses and medical records.
 - **XAMPP**: A software package used for locally hosting the MySQL database and managing it.
 
 ## Program Demonstration
@@ -40,7 +40,7 @@ This project utilizes the following technologies and tools:
   <img src="images/Capture6.PNG" alt="List of appointments" height="400">
   <p>List of appointments</p>
   <hr>
-  <img src="images/Capture22.PNG" alt="Patients window" height="400">
+  <img src="images/Capture23.PNG" alt="Patients window" height="400">
   <p>Patients window</p>
   <img src="images/Capture7.PNG" alt="Form for entering a new patient" height="400">
   <p>Form for entering a new patient</p>
