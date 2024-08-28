@@ -6,6 +6,15 @@ public class Expense {
     private double amount;
     private String date;
 
+    public Expense() {
+    }
+
+    public Expense(int patientId, double amount, String date) {
+        this.patientId = patientId;
+        this.amount = amount;
+        this.date = date;
+    }
+
     public Expense(int id, int patientId, double amount, String date) {
         this.id = id;
         this.patientId = patientId;

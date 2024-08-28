@@ -1,12 +1,9 @@
 package gui;
 
-import controllers.AppointmentController;
-import controllers.DoctorController;
+
 import controllers.MedicalRecordController;
 import controllers.PatientController;
 import database.DatabaseConnection;
-import entities.Appointment;
-import entities.Doctor;
 import entities.MedicalRecord;
 import entities.Patient;
 import javafx.application.Application;

@@ -78,6 +78,16 @@ public class MainMenuApp extends Application {
             }
         });
 
+        btnExpenses.setOnAction(e -> {
+            try {
+                Expenses expensesWindow = new Expenses();
+                Stage expensesStage = new Stage();
+                expensesWindow.start(expensesStage);
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
         VBox vBox = new VBox(20);
         vBox.setAlignment(Pos.CENTER);
         vBox.setPadding(new Insets(20));
