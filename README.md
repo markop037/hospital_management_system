@@ -40,16 +40,37 @@ This project utilizes the following technologies and tools:
   <img src="images/Capture6.PNG" alt="List of appointments" height="400">
   <p>List of appointments</p>
   <hr>
-  <img src="images/Capture3.PNG" alt="Appointments window" height="400">
-  <p>Appointments window</p>
-  <img src="images/Capture4.PNG" alt="Form for entering a new appointment" height="400">
-  <p>Form for entering a new appointment</p>
-  <img src="images/Capture5.PNG" alt="Error if not all fields are filled" height="400">
+  <img src="images/Capture22.PNG" alt="Patients window" height="400">
+  <p>Patients window</p>
+  <img src="images/Capture7.PNG" alt="Form for entering a new patient" height="400">
+  <p>Form for entering a new patient</p>
+  <img src="images/Capture8.PNG" alt="Error if not all fields are filled" height="400">
   <p>Error if not all fields are filled</p>
-  <img src="images/Capture15.PNG" alt="Added successfully appointment" height="400">
-  <p>Added successfully appointment</p>
-  <img src="images/Capture6.PNG" alt="List of appointments" height="400">
-  <p>List of appointments</p>
+  <img src="images/Capture9.PNG" alt="Added successfully patient" height="400">
+  <p>Added successfully patient</p>
+  <img src="images/Capture10.PNG" alt="List of patients" height="400">
+  <p>List of patients</p>
   <hr>
+  <img src="images/Capture11.PNG" alt="Medical Records window" height="400">
+  <p>Medical Records window</p>
+  <img src="images/Capture16.PNG" alt="Form for entering a new medical record" height="400">
+  <p>Form for entering a new medical record</p>
+  <img src="images/Capture12.PNG" alt="Error if not all fields are filled" height="400">
+  <p>Error if not all fields are filled</p>
+  <img src="images/Capture13.PNG" alt="Added successfully medical record" height="400">
+  <p>Added successfully medical record</p>
+  <img src="images/Capture14.PNG" alt="List of medical records" height="400">
+  <p>List of medical records</p>
+  <hr>
+  <img src="images/Capture17.PNG" alt="Expenses window" height="400">
+  <p>Expenses window</p>
+  <img src="images/Capture18.PNG" alt="Form for entering a new expense" height="400">
+  <p>Form for entering a new expense</p>
+  <img src="images/Capture19.PNG" alt="Error if not all fields are filled" height="400">
+  <p>Error if not all fields are filled</p>
+  <img src="images/Capture20.PNG" alt="Added successfully expenses" height="400">
+  <p>Added successfully expense</p>
+  <img src="images/Capture21.PNG" alt="List of expenses" height="400">
+  <p>List of expenses</p>
 </div>
 
